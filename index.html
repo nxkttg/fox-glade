@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лисяча галявина — Three.js</title>
+    <meta name="description" content="Вечірня 3D-галявина на Three.js: анімована лисиця, фізика cannon-es, шейдерний портал і світлячки.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦊</text></svg>">
+</head>
+<body>
+    <canvas class="webgl"></canvas>
+
+    <div id="loader" class="loader">
+        <div class="loader-box">
+            <div class="loader-title">🦊 Лисяча галявина</div>
+            <div class="loader-track"><div id="loader-bar" class="loader-bar"></div></div>
+            <div id="loader-percent" class="loader-percent">0%</div>
+        </div>
+    </div>
+
+    <header class="panel intro">
+        <h1>🦊 Лисяча галявина</h1>
+        <ul class="controls">
+            <li><b>Клік</b> — кинути м'яч</li>
+            <li><b>Клік по лисиці</b> — погладити</li>
+            <li><b>Пробіл</b> — кинути в центр</li>
+            <li><b>Тягни</b> — обертати камеру</li>
+            <li>Влуч у <b>портал</b> (цілься трохи вище) — м'яч телепортується</li>
+        </ul>
+        <dl class="stats">
+            <div><dt>М'ячів</dt><dd id="stat-balls">0</dd></div>
+            <div><dt>Телепортацій</dt><dd id="stat-teleports">0</dd></div>
+        </dl>
+    </header>
+
+    <nav class="panel toolbar">
+        <span class="label">Лисиця:</span>
+        <button data-fox="Survey" title="Клавіша 1">Стоїть</button>
+        <button data-fox="Walk" title="Клавіша 2">Йде</button>
+        <button data-fox="Run" title="Клавіша 3">Біжить</button>
+        <span class="divider"></span>
+        <button id="btn-reset" title="Клавіша R">🔄 Ящики</button>
+        <button id="btn-clear" title="Клавіша C">🧹 М'ячі</button>
+        <button id="btn-sound">🔇 Звук</button>
+    </nav>
+
+    <div id="toast" class="toast"></div>
+
+    <footer class="credits">
+        Fox: PixelMannen (CC0), tomkranis (CC-BY 4.0) · Parrot, Flamingo: three.js examples (mirada / ro.me) ·
+        HDRI: Poly Haven (CC0)
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>
